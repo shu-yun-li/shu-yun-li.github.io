@@ -1,39 +1,60 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shuyun Li — Personal Site</title>
-  <meta name="description" content="Shuyun Li 的个人主页，记录项目、想法与正在发生的事。">
-  <meta property="og:title" content="Shuyun Li — Personal Site">
-  <meta property="og:description" content="记录项目、想法与正在发生的事。">
+  <title>Shuyun Li — HCI Researcher &amp; Designer</title>
+  <meta name="description" content="Research and design portfolio of Shuyun Li.">
+  <meta property="og:title" content="Shuyun Li — HCI Researcher &amp; Designer">
+  <meta property="og:description" content="Research and design portfolio of Shuyun Li.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shu-yun-li.github.io">
   <meta property="og:image" content="https://github.com/shu-yun-li.png">
-  <meta name="theme-color" content="#f2efe8">
+  <meta name="theme-color" content="#faf9f5">
   <style>
-    :root{--paper:#f2efe8;--ink:#1b1c18;--muted:#6e7067;--line:rgba(27,28,24,.2);--acid:#d7ff43;--deep:#26352c}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",Arial,sans-serif;font-size:16px;line-height:1.6}a{color:inherit;text-decoration:none}::selection{background:var(--acid);color:var(--ink)}
-    .nav{display:flex;align-items:center;justify-content:space-between;width:min(100% - 48px,1280px);height:88px;margin:auto;border-bottom:1px solid var(--line)}
-    .logo{font-size:1.35rem;font-weight:750;letter-spacing:-.08em}.logo b{color:#5c7d2d}.links{display:flex;align-items:center;gap:30px;font-size:.82rem}.links a{transition:opacity .16s}.links a:hover{opacity:.55}.arrow{font-size:.9em;margin-left:3px}
-    .hero{width:min(100% - 48px,1280px);min-height:calc(100svh - 88px);margin:auto;padding:48px 0 72px;display:flex;flex-direction:column;justify-content:space-between}
-    .eyebrow,.index,.kicker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--muted)}.dot{width:8px;height:8px;border-radius:50%;background:#6e9933;box-shadow:0 0 0 4px rgba(110,153,51,.12)}
-    .hero-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,.72fr);gap:8vw;align-items:end}.greeting{margin:0 0 10px;color:var(--muted);font-size:clamp(1rem,1.6vw,1.3rem)}h1{margin:0;font-size:clamp(5rem,13.5vw,12.5rem);font-weight:500;line-height:.74;letter-spacing:-.085em}
-    .side{padding-bottom:8px}.avatar{width:86px;height:86px;border-radius:50%;object-fit:cover;filter:grayscale(1);border:1px solid var(--line)}.side p{max-width:390px;margin:26px 0;color:#4e5049;font-size:clamp(1rem,1.4vw,1.18rem)}.text-link{display:inline-flex;gap:8px;padding-bottom:5px;border-bottom:1px solid var(--ink);font-size:.85rem;font-weight:650}
-    .section{display:grid;grid-template-columns:1fr 3fr;gap:7vw;padding:110px max(24px,calc((100vw - 1280px)/2));border-top:1px solid var(--line)}.index{color:var(--muted)}.content{max-width:900px}.content h2{margin:0 0 60px;font-size:clamp(2.8rem,6vw,6.4rem);font-weight:500;line-height:1.02;letter-spacing:-.065em}.lead{max-width:790px;margin:0;font-size:clamp(1.4rem,2.8vw,2.45rem);line-height:1.38;letter-spacing:-.035em}.note{max-width:590px;margin:44px 0 0 auto;color:var(--muted)}
-    .now{background:#e8e3d8}.now-list{border-top:1px solid var(--line)}.now-item{display:grid;grid-template-columns:70px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line)}.now-item>span{font-family:ui-monospace,monospace;font-size:.72rem;color:var(--muted)}.now-item h3{margin:0 0 6px;font-size:1.25rem;font-weight:520}.now-item p{margin:0;color:var(--muted)}
-    footer{min-height:76svh;padding:96px max(24px,calc((100vw - 1280px)/2)) 32px;background:var(--deep);color:#f4f1e9;display:grid;grid-template-columns:2fr 1fr;align-content:space-between;gap:80px}.kicker{color:#b8c2b8}footer h2{margin:22px 0 0;font-size:clamp(3.5rem,8vw,8rem);line-height:.9;letter-spacing:-.07em;font-weight:500}.footer-links{align-self:end}.footer-links a{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.25)}.copy{grid-column:1/-1;margin:0;padding-top:28px;border-top:1px solid rgba(255,255,255,.18);color:#b8c2b8;font-size:.75rem}
-    @media(max-width:760px){.nav,.hero{width:min(100% - 32px,1280px)}.nav{height:72px}.links a:not(:last-child){display:none}.hero{min-height:calc(100svh - 72px);padding:30px 0 44px}.hero-grid{grid-template-columns:1fr;gap:48px}h1{font-size:clamp(4.5rem,27vw,8rem)}.avatar{width:68px;height:68px}.section{grid-template-columns:1fr;gap:42px;padding-top:76px;padding-bottom:76px}.content h2{margin-bottom:42px}.note{margin-left:0}footer{min-height:82svh;grid-template-columns:1fr;padding-top:76px}.footer-links{align-self:auto}}
+    :root{--paper:#fff;--ink:#18372f;--body:#4f5b57;--muted:#7f8985;--line:rgba(24,55,47,.16);--sage:#eef2ee;--sage-strong:#c7d3c6;--mint-accent:#9fbeae;--blush:#f5dfe2;--blush-strong:#e9aeb7}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",Arial,sans-serif;font-size:16px;line-height:1.65}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}::selection{background:var(--blush);color:var(--ink)}
+    .site-header{display:flex;align-items:center;justify-content:space-between;width:min(100% - 64px,1320px);height:84px;margin:auto;border-bottom:1px solid var(--line)}
+    .wordmark{font-family:Iowan Old Style,Baskerville,"Times New Roman",serif;font-size:1.45rem;letter-spacing:-.035em}.wordmark span{color:var(--mint-accent)}.nav-links{display:flex;gap:34px;font-size:.78rem}.nav-links a{padding:8px 0;transition:color .16s}.nav-links a:hover{color:var(--blush-strong)}
+    .hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.68fr);align-items:center;gap:clamp(64px,10vw,150px);width:min(100% - 64px,1320px);min-height:calc(100svh - 84px);margin:auto;padding:76px 0 92px}
+    .kicker{margin:0;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.68rem;letter-spacing:.11em;text-transform:uppercase}.intro-stack{max-width:690px;margin:25px 0 0;color:var(--body);font-family:Iowan Old Style,Baskerville,"Times New Roman",serif;font-size:clamp(1.02rem,1.45vw,1.28rem);line-height:1.58}.intro-stack p{margin:0 0 15px}.intro-stack p:last-child{margin-bottom:0}.name-highlight{color:var(--ink);text-decoration-line:underline;text-decoration-color:var(--blush-strong);text-decoration-thickness:.16em;text-underline-offset:.12em;text-decoration-skip-ink:none}.hero-actions{display:flex;flex-wrap:wrap;gap:30px;margin-top:34px}.hero-actions a{display:inline-flex;align-items:center;gap:14px;padding-bottom:5px;border-bottom:1px solid var(--ink);font-size:.78rem}
+    .portrait-wrap{margin:0}.portrait{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;filter:saturate(.58) contrast(.96);background:var(--sage)}.portrait-wrap figcaption{margin-top:12px;color:var(--muted);font-size:.68rem;letter-spacing:.04em}
+    .section{display:grid;grid-template-columns:minmax(130px,.28fr) minmax(0,1fr);gap:clamp(46px,8vw,126px);padding:110px max(32px,calc((100vw - 1320px)/2));border-top:1px solid var(--line)}.section-label{display:flex;gap:16px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase}.section-label p{margin:0}.section-label span{color:var(--blush-strong)}.section-body{max-width:1010px}.section-body h2{margin:0 0 36px;font-family:Iowan Old Style,Baskerville,"Times New Roman",serif;font-size:clamp(1.5rem,2.35vw,2.5rem);font-weight:400;line-height:1.04;letter-spacing:-.035em}.section-lead{max-width:720px;margin:0;color:var(--body);font-size:clamp(1.05rem,1.65vw,1.34rem)}
+    .topic-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:46px}.topic-list span{padding:8px 13px;border:1px solid var(--line);border-radius:999px;color:var(--body);font-size:.72rem}.quiet-note{margin:54px 0 0;color:var(--muted);font-size:.75rem}
+    .work-section{background:#fff}.project-row{display:grid;grid-template-columns:minmax(250px,.95fr) minmax(280px,1fr);gap:clamp(34px,6vw,86px);align-items:center}.project-visual{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;overflow:hidden;background:#fff;border:1px solid rgba(24,55,47,.08)}.project-visual>span{position:absolute;top:18px;left:20px;color:var(--muted);font-family:ui-monospace,monospace;font-size:.68rem}.project-visual i{width:42%;aspect-ratio:1;border:1px solid var(--sage-strong);border-radius:50%;box-shadow:42px 30px 0 -12px var(--blush)}.meta{margin:0 0 14px;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em}.project-copy h3{margin:0 0 20px;font-family:Iowan Old Style,Baskerville,"Times New Roman",serif;font-size:clamp(1.55rem,2.5vw,2.6rem);font-weight:400;line-height:1;letter-spacing:-.035em}.project-copy>p:not(.meta){max-width:520px;margin:0 0 30px;color:var(--body)}.project-status{color:var(--muted);font-size:.72rem;border-bottom:1px solid var(--line)}.archive-row{display:grid;grid-template-columns:.6fr 1fr auto;gap:24px;margin-top:82px;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--body);font-size:.76rem}.archive-row p{margin:0}.archive-row span{color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:minmax(280px,.85fr) minmax(300px,1fr);gap:8vw}.about-copy>p{margin:0 0 54px;color:var(--body);font-size:1.08rem}.about-copy dl{margin:0;border-top:1px solid var(--line)}.about-copy dl>div{display:grid;grid-template-columns:130px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--line)}.about-copy dt{color:var(--muted);font-size:.7rem}.about-copy dd{margin:0;font-size:.82rem}
+    footer{display:grid;grid-template-columns:1fr auto;align-items:end;gap:80px;padding:92px max(32px,calc((100vw - 1320px)/2)) 30px;background:var(--sage);color:var(--ink)}footer h2{margin:16px 0 0;font-family:Iowan Old Style,Baskerville,"Times New Roman",serif;font-size:clamp(1.7rem,2.6vw,2.8rem);font-weight:400;line-height:1;letter-spacing:-.035em}footer>a{display:flex;align-items:center;gap:9px;padding-bottom:5px;border-bottom:1px solid var(--line);font-size:.78rem}.copyright{grid-column:1/-1;margin:68px 0 0;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:.68rem}
+    @media(max-width:760px){.site-header,.hero{width:min(100% - 36px,1320px)}.site-header{height:70px}.nav-links{gap:16px}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.hero{grid-template-columns:1fr;gap:54px;min-height:auto;padding:78px 0 72px}.hero-copy{order:1}.portrait-wrap{order:2;width:72%;margin-left:auto}.intro-stack{font-size:1rem}.section{grid-template-columns:1fr;gap:42px;padding:76px 18px}.project-row,.about-grid{grid-template-columns:1fr}.archive-row{grid-template-columns:1fr;gap:8px}.about-copy dl>div{grid-template-columns:1fr;gap:4px}footer{grid-template-columns:1fr;gap:46px;padding:72px 18px 26px}footer>a{justify-self:start}.copyright{margin-top:22px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
-<body>
-  <nav class="nav" aria-label="主要导航"><a class="logo" href="#top">SL<b>.</b></a><div class="links"><a href="#about">关于</a><a href="#now">近况</a><a href="https://github.com/shu-yun-li" target="_blank" rel="noreferrer">GitHub <span class="arrow">↗</span></a></div></nav>
+<body id="top">
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Shuyun Li, home">Shuyun <span>Li</span></a>
+    <nav class="nav-links" aria-label="Primary navigation"><a href="#research">Research</a><a href="#work">Work</a><a href="#about">About</a><a href="#cv">CV</a></nav>
+  </header>
   <main>
-    <section class="hero" id="top"><div class="eyebrow"><span class="dot"></span>Personal space · 个人主页</div><div class="hero-grid"><div><p class="greeting">你好，我是</p><h1>Shuyun<br>Li.</h1></div><div class="side"><img class="avatar" src="https://github.com/shu-yun-li.png" alt="Shuyun Li 的 GitHub 头像"><p>欢迎来到我的数字空间。这里会慢慢生长，记录我正在做的事、感兴趣的问题，以及一路收集的想法。</p><a class="text-link" href="#about">继续了解我 <span>↘</span></a></div></div></section>
-    <section class="section" id="about"><p class="index">01 / ABOUT</p><div class="content"><h2>一个属于我的，<br>安静而开放的角落。</h2><p class="lead">我相信好的作品来自持续的好奇、观察与实践。这个网站是我的线上名片，也是一份不断更新的个人档案。</p><p class="note">更多个人经历、研究方向和作品即将补充。你也可以先通过 GitHub 看看我留下的足迹。</p></div></section>
-    <section class="section now" id="now"><p class="index">02 / NOW</p><div class="content"><h2>最近在做什么</h2><div class="now-list"><div class="now-item"><span>01</span><div><h3>搭建这个网站</h3><p>把想法和作品放进一个真正属于自己的空间。</p></div></div><div class="now-item"><span>02</span><div><h3>整理个人项目</h3><p>下一步会在这里加入项目经历、过程与成果。</p></div></div></div></div></section>
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-copy">
+        <p class="kicker">HCI Researcher &amp; Designer</p>
+        <div class="intro-stack"><p>My name is <span class="name-highlight">Shuyun Li</span>. I am an HCI researcher and designer working across interaction design, garments, and textiles.</p><p>I am interested in how people experience technology beyond the screen, and how research and design can make everyday interactions more thoughtful, tangible, and human.</p><p>My background includes study at University of the Arts London and experience with Tencent Fintech, Tencent Games, and Carewear+.</p></div>
+        <div class="hero-actions"><a href="#research">Research ↓</a><a href="#cv">CV ↓</a><a href="https://github.com/shu-yun-li" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+      </div>
+      <figure class="portrait-wrap"><img class="portrait" src="https://github.com/shu-yun-li.png" alt="Portrait of Shuyun Li"></figure>
+    </section>
+    <section class="section" id="research">
+      <div class="section-label"><span>01</span><p>Research</p></div>
+      <div class="section-body"><h2>Questions before answers.</h2><p class="section-lead">My research interests sit between people, technology, and lived experience. I am currently bringing my projects and publications into one clear archive.</p><div class="topic-list" aria-label="Research interests"><span>Human–Computer Interaction</span><span>Embodied Experience</span><span>Wearable Interaction</span></div><p class="quiet-note">Research projects and publications are being added.</p></div>
+    </section>
+    <section class="section work-section" id="work">
+      <div class="section-label"><span>02</span><p>Selected work</p></div>
+      <div class="section-body"><article class="project-row"><div class="project-visual" aria-hidden="true"><span>01</span><i></i></div><div class="project-copy"><p class="meta">Research · Interaction design</p><h3>Carewear+</h3><p>A selected project from my earlier portfolio. Full context, process, and outcomes will be restored here next.</p><span class="project-status">Case study coming soon</span></div></article><div class="archive-row"><p>More work</p><p>UX · Interaction · Garment · Textile</p><span>Archive in progress</span></div></div>
+    </section>
+    <section class="section" id="about">
+      <div class="section-label"><span>03</span><p>About</p></div>
+      <div class="section-body about-grid"><h2>Research-minded.<br>Design-led.</h2><div class="about-copy"><p>I am an HCI researcher and designer interested in the relationship between people, technology, and everyday life.</p><dl><div><dt>Education</dt><dd>University of the Arts London · 2022–2026</dd></div><div><dt>Experience</dt><dd>Tencent Fintech · Tencent Games · Carewear+</dd></div><div id="cv"><dt>Curriculum vitae</dt><dd>PDF version will be added shortly.</dd></div></dl></div></div>
+    </section>
   </main>
-  <footer><div><p class="kicker">保持联系</p><h2>Let’s make<br>something good.</h2></div><div class="footer-links"><a href="https://github.com/shu-yun-li" target="_blank" rel="noreferrer"><span>GitHub</span><span>↗</span></a></div><p class="copy">© 2026 Shuyun Li</p></footer>
+  <footer><div><p class="kicker">Get in touch</p><h2>Let’s exchange ideas.</h2></div><a href="https://github.com/shu-yun-li" target="_blank" rel="noreferrer">GitHub ↗</a><p class="copyright">© 2026 Shuyun Li</p></footer>
 </body>
 </html>
