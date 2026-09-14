@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shuyun Li — Personal Site</title>
+  <meta name="description" content="Shuyun Li 的个人主页，记录项目、想法与正在发生的事。">
+  <meta property="og:title" content="Shuyun Li — Personal Site">
+  <meta property="og:description" content="记录项目、想法与正在发生的事。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shu-yun-li.github.io">
+  <meta property="og:image" content="https://github.com/shu-yun-li.png">
+  <meta name="theme-color" content="#f2efe8">
+  <style>
+    :root{--paper:#f2efe8;--ink:#1b1c18;--muted:#6e7067;--line:rgba(27,28,24,.2);--acid:#d7ff43;--deep:#26352c}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",Arial,sans-serif;font-size:16px;line-height:1.6}a{color:inherit;text-decoration:none}::selection{background:var(--acid);color:var(--ink)}
+    .nav{display:flex;align-items:center;justify-content:space-between;width:min(100% - 48px,1280px);height:88px;margin:auto;border-bottom:1px solid var(--line)}
+    .logo{font-size:1.35rem;font-weight:750;letter-spacing:-.08em}.logo b{color:#5c7d2d}.links{display:flex;align-items:center;gap:30px;font-size:.82rem}.links a{transition:opacity .16s}.links a:hover{opacity:.55}.arrow{font-size:.9em;margin-left:3px}
+    .hero{width:min(100% - 48px,1280px);min-height:calc(100svh - 88px);margin:auto;padding:48px 0 72px;display:flex;flex-direction:column;justify-content:space-between}
+    .eyebrow,.index,.kicker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--muted)}.dot{width:8px;height:8px;border-radius:50%;background:#6e9933;box-shadow:0 0 0 4px rgba(110,153,51,.12)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,.72fr);gap:8vw;align-items:end}.greeting{margin:0 0 10px;color:var(--muted);font-size:clamp(1rem,1.6vw,1.3rem)}h1{margin:0;font-size:clamp(5rem,13.5vw,12.5rem);font-weight:500;line-height:.74;letter-spacing:-.085em}
+    .side{padding-bottom:8px}.avatar{width:86px;height:86px;border-radius:50%;object-fit:cover;filter:grayscale(1);border:1px solid var(--line)}.side p{max-width:390px;margin:26px 0;color:#4e5049;font-size:clamp(1rem,1.4vw,1.18rem)}.text-link{display:inline-flex;gap:8px;padding-bottom:5px;border-bottom:1px solid var(--ink);font-size:.85rem;font-weight:650}
+    .section{display:grid;grid-template-columns:1fr 3fr;gap:7vw;padding:110px max(24px,calc((100vw - 1280px)/2));border-top:1px solid var(--line)}.index{color:var(--muted)}.content{max-width:900px}.content h2{margin:0 0 60px;font-size:clamp(2.8rem,6vw,6.4rem);font-weight:500;line-height:1.02;letter-spacing:-.065em}.lead{max-width:790px;margin:0;font-size:clamp(1.4rem,2.8vw,2.45rem);line-height:1.38;letter-spacing:-.035em}.note{max-width:590px;margin:44px 0 0 auto;color:var(--muted)}
+    .now{background:#e8e3d8}.now-list{border-top:1px solid var(--line)}.now-item{display:grid;grid-template-columns:70px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line)}.now-item>span{font-family:ui-monospace,monospace;font-size:.72rem;color:var(--muted)}.now-item h3{margin:0 0 6px;font-size:1.25rem;font-weight:520}.now-item p{margin:0;color:var(--muted)}
+    footer{min-height:76svh;padding:96px max(24px,calc((100vw - 1280px)/2)) 32px;background:var(--deep);color:#f4f1e9;display:grid;grid-template-columns:2fr 1fr;align-content:space-between;gap:80px}.kicker{color:#b8c2b8}footer h2{margin:22px 0 0;font-size:clamp(3.5rem,8vw,8rem);line-height:.9;letter-spacing:-.07em;font-weight:500}.footer-links{align-self:end}.footer-links a{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.25)}.copy{grid-column:1/-1;margin:0;padding-top:28px;border-top:1px solid rgba(255,255,255,.18);color:#b8c2b8;font-size:.75rem}
+    @media(max-width:760px){.nav,.hero{width:min(100% - 32px,1280px)}.nav{height:72px}.links a:not(:last-child){display:none}.hero{min-height:calc(100svh - 72px);padding:30px 0 44px}.hero-grid{grid-template-columns:1fr;gap:48px}h1{font-size:clamp(4.5rem,27vw,8rem)}.avatar{width:68px;height:68px}.section{grid-template-columns:1fr;gap:42px;padding-top:76px;padding-bottom:76px}.content h2{margin-bottom:42px}.note{margin-left:0}footer{min-height:82svh;grid-template-columns:1fr;padding-top:76px}.footer-links{align-self:auto}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="主要导航"><a class="logo" href="#top">SL<b>.</b></a><div class="links"><a href="#about">关于</a><a href="#now">近况</a><a href="https://github.com/shu-yun-li" target="_blank" rel="noreferrer">GitHub <span class="arrow">↗</span></a></div></nav>
+  <main>
+    <section class="hero" id="top"><div class="eyebrow"><span class="dot"></span>Personal space · 个人主页</div><div class="hero-grid"><div><p class="greeting">你好，我是</p><h1>Shuyun<br>Li.</h1></div><div class="side"><img class="avatar" src="https://github.com/shu-yun-li.png" alt="Shuyun Li 的 GitHub 头像"><p>欢迎来到我的数字空间。这里会慢慢生长，记录我正在做的事、感兴趣的问题，以及一路收集的想法。</p><a class="text-link" href="#about">继续了解我 <span>↘</span></a></div></div></section>
+    <section class="section" id="about"><p class="index">01 / ABOUT</p><div class="content"><h2>一个属于我的，<br>安静而开放的角落。</h2><p class="lead">我相信好的作品来自持续的好奇、观察与实践。这个网站是我的线上名片，也是一份不断更新的个人档案。</p><p class="note">更多个人经历、研究方向和作品即将补充。你也可以先通过 GitHub 看看我留下的足迹。</p></div></section>
+    <section class="section now" id="now"><p class="index">02 / NOW</p><div class="content"><h2>最近在做什么</h2><div class="now-list"><div class="now-item"><span>01</span><div><h3>搭建这个网站</h3><p>把想法和作品放进一个真正属于自己的空间。</p></div></div><div class="now-item"><span>02</span><div><h3>整理个人项目</h3><p>下一步会在这里加入项目经历、过程与成果。</p></div></div></div></div></section>
+  </main>
+  <footer><div><p class="kicker">保持联系</p><h2>Let’s make<br>something good.</h2></div><div class="footer-links"><a href="https://github.com/shu-yun-li" target="_blank" rel="noreferrer"><span>GitHub</span><span>↗</span></a></div><p class="copy">© 2026 Shuyun Li</p></footer>
+</body>
+</html>
